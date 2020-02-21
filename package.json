@@ -1,0 +1,25 @@
+{
+  "name": "for9atask",
+  "version": "1.0.0",
+  "description": "mimi Task",
+  "main": "index.js",
+  "scripts": {
+    "test": "Uplode Photos"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wael93/For9aTask.git"
+  },
+  "keywords": [
+    "wael"
+  ],
+  "author": "wael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wael93/For9aTask/issues"
+  },
+  "homepage": "https://github.com/wael93/For9aTask#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
