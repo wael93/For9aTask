@@ -1,1 +1,2 @@
-# For9aTask
+# authAPI
+Auth API Node.js JWT by Dev Ed
