@@ -1,7 +1,11 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+var cors = require('cors');
 const dotenv = require('dotenv');
+
+//cors
+app.use(cors());
 
 //Import Routes
 const authRoute = require('./routes/auth');
@@ -22,5 +26,7 @@ app.use(express.json());
 //Route Middleware
 app.use('/api/user', authRoute);
 app.use('/dashboard', dashboardRoute);
+
+//
 
 app.listen(process.env.HTTP_PORT, () => console.log("Server start"));

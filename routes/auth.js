@@ -6,7 +6,7 @@ const {registerValidation, loginValidation} = require('../Validation')
 
 
 router.post('/register', async (req, res) => {
-    console.log('Register route');
+    console.log(req.body);
 
     //validation
     const {error} = registerValidation(req.body);
@@ -14,6 +14,7 @@ router.post('/register', async (req, res) => {
 
     //check user already exist
     const emailExist = await User.findOne({email: req.body.email});
+   
     if (emailExist) return res.status(400).send("Email already in db");
 
     //hash password
@@ -24,7 +25,9 @@ router.post('/register', async (req, res) => {
     const user = new User({
         name: req.body.name,
         email: req.body.email,
-        password: hashedPassword
+        password: hashedPassword,
+        img:req.body.img
+        
     });
 
     try {
